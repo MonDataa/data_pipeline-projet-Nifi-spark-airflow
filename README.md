@@ -1,9 +1,5 @@
 # data_pipeline_projet
 
-***TRAVAUX EFFECTUÉS***
-
-***Réalisé par : Mounsif Elkhiyar , Achraf ATTARY , Basel ALASSAAD***
-
 ## 1) Collecte de donnée (Nifi)
 
 **1) nifi data ingestion :** l'objectif dans cette phase et de collecter les données dans differentes source ,dans notre cas on va travaillé  deux fichier excel d'Election présidentielle des 10 et 24 avril 2022,aprés on va créer des processus pour extraire les données ,transformation des données et qu'elles sont accessibles dans differentes source (HDFS,local ou meme l'extraire via le producer de kafka),implementer une strategie de validation des données.
