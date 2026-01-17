@@ -7,17 +7,17 @@
 
 Donc pour realisé cette tache nous avons crées deux groupes :
 
-![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/main/nifi/nifi_group.PNG)
+![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/blob/main/nifi/nifi_group.PNG)
 
 `Groupe 1` : nous avons créer ce groupe pour convertir les fichiers excel en csv :
 
-![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/main/nifi/nifi_flow1.PNG)
+![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/blob/main/nifi/nifi_flow1.PNG)
 
 `Groupe 2` : ce groupe sert a etablir un systeme de validation des fichiers csv graces aux processus (ValidationCSV) aprés on a utilisé Kafka sur nifi ,on a travaillé par les processeurs consummeKafka et publishKafka pour consommer nos données de nifi dans deux topics ( valid et invalid data ) et les publier dans un fichier (HDFS,local)
 
-![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/main/nifi/nifi_flow2.PNG)
+![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/blob/main/nifi/nifi_flow2.PNG)
 
-![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/main/nifi/resultat_hdfs.PNG)
+![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/blob/main/nifi/resultat_hdfs.PNG)
 
 **2) nifi regisrtry :**
 - 1) Nous avons créé un repository sur `Github`, puis généré le Personal access token. - 
@@ -27,7 +27,7 @@ Donc pour realisé cette tache nous avons crées deux groupes :
 - 5) Nous allons configurer un nouveau registry client sur Nifi pour faire le versionning dans ce bucket. 
 - 6) Et finalement, quand on commence le versionning sur un process group, ce dernier va être directement commit dans le Github.
 
-![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/main/nifi/nifi_registry_flow.PNG)
+![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/blob/main/nifi/nifi_registry_flow.PNG)
 
 ## 2) Traitement des données (Spark)
 Une fois les données collectées, nous avons procédés à la création d'un dataset regroupant les outputs de nos différents batchs pour créer un fichier final qui regroup toute les variables interresant dans la phase d'analyse.
@@ -52,4 +52,4 @@ Dans le but d'automatiser notre flot de données, nous avons utilisés un DAGs s
 - 4) Fin `spark`
 - 5) Fin `nifi`
 
-![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/main/airflow/airflow_dag.PNG)
+![enter image description here](https://github.com/MonDataa/data_pipeline-projet-Nifi-spark-airflow/blob/main/airflow/airflow_dag.PNG)
